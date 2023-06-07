@@ -1,14 +1,20 @@
+import {Routes , Route , BrowserRouter} from 'react-router-dom'
 import Home from './pages/Home';
 import Categories from './pages/Categories';
-import {Routes , Route , BrowserRouter} from 'react-router-dom'
+import Checkout from './pages/Checkout';
+
+
+
 
 function App() {
+
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='categories' element ={<Categories />}/>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path='/categories/:id' element={<Categories />} />
+      </Routes>
     </BrowserRouter>
   );
 }
